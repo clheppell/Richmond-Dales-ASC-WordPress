@@ -32,9 +32,6 @@ remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
-add_filter( 'wp_feed_cache_transient_lifetime',
-   create_function('$a', 'return 1800;') );
-
 add_action( 'after_setup_theme', 'chester_theme_setup' );
 function chester_theme_setup() {
 
@@ -429,15 +426,6 @@ add_filter( 'post_thumbnail_html', 'remove_image_size_attributes' );
 
 // Remove image size attributes from images added to a WordPress post
 add_filter( 'image_send_to_editor', 'remove_image_size_attributes' );
-
-//Gets post cat slug and looks for single-[cat slug].php and applies it
-add_filter('single_template', create_function(
-	'$the_template',
-	'foreach( (array) get_the_category() as $cat ) {
-		if ( file_exists(TEMPLATEPATH . "/single-{$cat->slug}.php") )
-		return TEMPLATEPATH . "/single-{$cat->slug}.php"; }
-	return $the_template;' )
-);
 
 function wpb_tags() {
 $wpbtags =  get_tags();

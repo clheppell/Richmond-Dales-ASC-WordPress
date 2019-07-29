@@ -2,15 +2,16 @@
 <?php get_template_part('pageheader'); ?>
 
 <div class="container">
-  <div class="row">
-    <div class="col-md-8 blog-main">
-      <h1 class="entry"><?php _e('Search Results', 'chester'); ?></h1>
-      <hr>
-      <div id="search">
-        <?php get_search_form(); ?>
-      </div>
-      <hr>
 
+  <div class="cell bg-primary-dark text-white mb-5">
+    <h1 class="mb-4">Search Results</h1>
+    <div id="search">
+      <?php get_search_form(); ?>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-8 blog-main">
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
       <div class="cell">
@@ -24,13 +25,20 @@
       </div>
 
 	    <?php endwhile; else: ?>
-	    <?php _e( '<p class="lead mb-0">Sorry. We didn&#39;t find anything for that.</p><p>Please try another search.</p>', 'wpboot' ); ?>
+	    <p class="lead">
+        Sorry. We didn't find anything for that.
+      </p>
+      
+      <p>
+        Please try another search.
+      </p>
+      
 	    <?php endif; ?>
 
       <?php if ( function_exists('wp_bootstrap_pagination') ) wp_bootstrap_pagination(); ?>
 
       </div><!-- /.blog-main -->
-    <div class="col-md-4">
+    <div class="col-lg-4">
       <?php get_sidebar(); ?>
     </div>
   </div>

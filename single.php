@@ -9,7 +9,7 @@
           <article id="post-<?php the_ID(); ?>" <?php post_class('post blog-post'); ?>>
             <div class="mb-4">
               <?php if (get_the_time('U') < strtotime('-3 months')) { ?>
-                <div class="d-inline-block p-2 mb-3 bg-warning">
+                <div class="d-inline-block p-2 mb-3 bg-warning rounded">
                   <i class="fa fa-clock-o" aria-hidden="true"></i> This post is more than <strong><?=htmlspecialchars(human_time_diff(get_the_time('U')))?> old</strong>
                 </div>
               <?php } ?>
@@ -42,6 +42,10 @@
             <div class="cls-post-footer d-print-none">
               <?php get_template_part( 'sharing' ); ?>
             </div>
+
+            <?php //$previous = previous_post_link( '%link', '' . _x( '<i class="fa fa-chevron-left"></i>', 'Previous post link', 'chester' ) . ' Previous' ); ?>
+            <?php //$next = next_post_link( '%link', 'Next ' . _x( '<i class="fa fa-chevron-right"></i>', 'Next post link', 'chester' ) . '' ); ?>
+            <?php if (true || $previous != null || $next != null) { ?>
             <div class="cls-post-footer d-print-none">
               <h3 class="m-t-0">Other Recent Posts</h3>
               <ul class="cls-pager-parent row no-gutters clearfix">
@@ -49,6 +53,7 @@
                 <li class="col ml-auto"><div class="cls-pager cls-pager-right"><?php next_post_link( '%link', 'Next ' . _x( '<i class="fa fa-chevron-right"></i>', 'Next post link', 'chester' ) . '' ); ?></div></li>
               </ul>
             </div>
+            <?php } ?>
             <?php comments_template(); ?>
           </aside>
           <?php endwhile; endif; ?>
