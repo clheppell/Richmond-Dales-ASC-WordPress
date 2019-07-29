@@ -62,11 +62,10 @@ $current_url = urlencode(home_url(add_query_arg(array(), $wp->request)));
   <!-- Modals and Other Hidden HTML -->
   <?php wp_footer(); ?>
   <?php $theme_dir = get_template_directory_uri(); ?>
-  <script defer src="https://static.chesterlestreetasc.co.uk/global/headers/GlobalNavigation.js"></script>
   <script rel="preload" src="<?=$theme_dir?>/js/jquery-3.3.1.slim.min.js"></script>
   <script src="<?=$theme_dir?>/js/popper.min.js"></script>
   <script src="<?=$theme_dir?>/js/bootstrap.min.js"></script>
-  <script async src="https://static.chesterlestreetasc.co.uk/global/js/clscookies.js"></script>
+  <script async src="<?=$theme_dir?>/js/Cookies.js"></script>
   <script async src="<?=$theme_dir?>/js/chester.js"></script>
 </footer>
 
