@@ -447,15 +447,14 @@ function first_paragraph($content){
      .login h1 {
        padding-top: 1rem;
      }
-         #login h1 a, .login h1 a {
-             background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/chesterLogo.svg);
-    width: 100%;
-    max-width: 445px;
-    height: auto;
- 		background-size: auto;
- 		background-repeat: no-repeat;
-    padding: 1rem 0 0 0;
-         }
+    #login h1 a, .login h1 a {
+      background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/logo.jpg);
+      background-position: center;
+      background-size: contain;
+      max-height: 100px;
+      background-repeat: no-repeat;
+      padding: 1rem 0 0 0;
+    }
      </style>
  <?php }
  add_action( 'login_enqueue_scripts', 'my_login_logo' );
@@ -463,24 +462,29 @@ function first_paragraph($content){
  // custom login for theme
  function childtheme_custom_login() { ?>
   <style>
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+  @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700');
+  html, body {
+    font-family: "Source Sans Pro";
+  }
   #login {
-     width: 100%;
-     padding: 0 1rem;
-     margin: auto;
-     min-height: 100%;
+    width: 100%;
+    margin: auto;
+    min-height: 100%;
+ }
+ .text-center {
+   text-align: center;
  }
  .cell, .well, #loginform, .login .message, #lostpasswordform {
     min-height: 20px;
     border: none;
-        border-top-width: medium;
-        border-top-style: none;
-        border-top-color: currentcolor;
+    border-top-width: medium;
+    border-top-style: none;
+    border-top-color: currentcolor;
     border-top: 3px solid #bd0000;
     border-radius: 0;
     box-shadow: none;
     -webkit-box-shadow: none;
-    background-color: #efefef;
+    background-color: #e9ecef;
     padding: 1rem;
     max-width: 100%;
     margin: 0 auto 1rem auto;
@@ -521,12 +525,12 @@ function first_paragraph($content){
     width: 33.3333%;
   }
 }
-.login #backtoblog a:hover, .login #nav a:hover {
+.login a:hover, .login #nav a:hover, .login #backtoblog a:hover {
     color: #bd0000;
     text-decoration: underline;
 }
-.login #backtoblog a, .login #nav a {
-    color: #bd0000;
+.login a, .login #nav a, .login #backtoblog a {
+  color: #bd0000;
 }
 .login h1 {
     padding-top: 1rem;
@@ -619,36 +623,24 @@ body, html, .login, #login {
 
  add_action('login_head', 'childtheme_custom_login');
 
- function my_login_logo_url() {
-    return home_url();
+function my_login_logo_url() {
+  return home_url();
 }
 add_filter( 'login_headerurl', 'my_login_logo_url' );
 
 function my_login_logo_url_title() {
-    return 'CLS ASC Homepage';
+    return 'Homepage';
 }
 add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 
 function smallenvelop_login_message( $message ) {
-    if ( empty($message) ){
-        return "<div class=\"cell\"><h1 class=\"h3 pt-0\">Login with G Suite</h1>
-        <p>Committee Members &amp; Coaches should login with our Single Sign-On system using their G Suite Account.</p>
-        <p>Website only users should login with their WordPress Username and Password below.</p>
-        <a class=\"btn btn-primary btn-block\" href=\"http://login.chesterlestreetasc.co.uk/\" target=\"_self\">Login with CLS ASC Single Sign On</a></div>";
-    } else {
-        return $message;
-    }
+  if ( empty($message) ){
+    return '<p class="text-center">This login page is for club staff with WordPress accounts.</p><p class="text-center">If you\'re a parent, <a href="https://membership.rdasc.org.uk/">log in to your Club Membership Account</a>.</p>';
+  } else {
+    return $message;
+  }
 }
-
 add_filter( 'login_message', 'smallenvelop_login_message' );
-
-function my_login_stylesheet() {
-  wp_enqueue_style('custom-login', '/wp-content/themes/chester/css/chester-2.0.17.css');
-  wp_enqueue_script( 'custom-login3', 'https://static.chesterlestreetasc.co.uk/global/js/jquery.min.js' );
-  wp_enqueue_script( 'custom-login4', '/wp-content/themes/chester/js/popper.min.js' );
-  wp_enqueue_script( 'custom-login5', '/wp-content/themes/chester/js/bootstrap.min.js' );
-}
-add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
 
 add_filter('wpseo_metadesc', 'custom_meta');
 function custom_meta($desc) {
