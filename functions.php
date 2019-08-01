@@ -465,157 +465,33 @@ function first_paragraph($content){
   @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700');
   html, body {
     font-family: "Source Sans Pro";
+    background: #fff;
   }
-  #login {
-    width: 100%;
-    margin: auto;
-    min-height: 100%;
- }
- .text-center {
-   text-align: center;
- }
- .cell, .well, #loginform, .login .message, #lostpasswordform {
-    min-height: 20px;
-    border: none;
-    border-top-width: medium;
-    border-top-style: none;
-    border-top-color: currentcolor;
-    border-top: 3px solid #bd0000;
-    border-radius: 0;
-    box-shadow: none;
-    -webkit-box-shadow: none;
-    background-color: #e9ecef;
-    padding: 1rem;
-    max-width: 100%;
-    margin: 0 auto 1rem auto;
-}
-
-.login #login_error {
-    color: #721c24;
-    background-color: #f8d7da;
-    border-color: #f5c6cb;
-    border-left-color: rgb(245, 198, 203);
-    padding: 0.75rem 1.25rem;
-    border: 1px solid transparent;
-    border-left-width: 1px;
-    border-left-style: solid;
-    border-top-color: transparent;
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-    margin: 0 auto 1rem auto;
-}
-.login #nav, .login #backtoblog, .login {
-  padding: 0;
-  font-size: 1rem;
-  color: #333;
-  width: 100%;
-  margin: 0 auto 1rem auto;
-}
-.login p, .login h1 {
-  margin-bottom: 1rem;
-}
-@media screen and (min-width: 600px) {
-  .login #nav, .login #backtoblog, .cell, .well, #loginform, .login .message, #lostpasswordform, .login #login_error {
-    width: 50%;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .login #nav, .login #backtoblog, .cell, .well, #loginform, .login .message, #lostpasswordform, .login #login_error {
-    width: 33.3333%;
-  }
-}
 .login a:hover, .login #nav a:hover, .login #backtoblog a:hover {
-    color: #bd0000;
-    text-decoration: underline;
+  color: #bd0000;
+  text-decoration: underline;
 }
 .login a, .login #nav a, .login #backtoblog a {
   color: #bd0000;
 }
 .login h1 {
-    padding-top: 1rem;
+  padding-top: 1rem;
+}
+.login form {
+  background: #e9ecef;
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 #loginform p, .login label {
   color: #333;
   font-size: 0.9375rem;
   width: 100%;
 }
-.login form .input, .login input[type="text"] {
-  display: block;
-  width: 100%;
-  padding: 0.5rem 0.75rem;
-  margin: 0.25rem 0 1rem 0 !important;
-  font-size: 0.9375rem;
-  line-height: 1.25;
-  color: #495057;
-  background-color: #fff;
-  background-image: none;
-  background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0;
-  box-shadow: none !important;
-  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
-  transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
-  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+p {
+  margin: 0 0 1rem 0 !important;
 }
-.login form .input:focus, .login input[type="text"]:focus {
-    color: #495057;
-    background-color: #fff;
-    border-color: #ff3e3e;
-    outline: none;
-}
-.login form .forgetmenot label {
-    font-size: 0.9375rem;
-    line-height: auto;
-}
-.wp-core-ui .button, .wp-core-ui .button.button-large, .wp-core-ui .button.button-small, a.preview, input#publish, input#save-post {
-    padding: none;
-    line-height: none;
-    font-size: none;
-    vertical-align: none;
-    height: none;
-    margin-bottom: none;
-}
-.login .button-primary {
-  color: #fff;
-  margin: 1rem 0 0 0;
-  background-color: #bd0000;
-  border-color: #bd0000;
-  display: block;
-  width: 100%;
-  height: auto !important;
-	font-weight: normal;
-	text-align: center;
-	white-space: nowrap;
-	vertical-align: middle;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	border: 1px solid transparent;
-	padding: 0.5rem 0.75rem !important;
-	font-size: 0.9375rem !important;
-	line-height: 1.25 !important;
-	-webkit-transition: all 0.2s ease-in-out;
-	-o-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-  text-shadow: none !important;
-  border-radius: 0px !important;
-}
-
-.login .button-primary:hover, .login .button-primary:focus, .login .button-primary:active {
-  color: #fff;
-  background-color: #970000;
-  border-color: #8a0000;
-}
-
-body, html, .login, #login {
-  height: auto;
-  background-color: #FFF;
+.text-center {
+  text-align: center;
 }
  </style>
 
