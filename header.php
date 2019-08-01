@@ -34,32 +34,32 @@ Designed by Chris Heppell, www.chrisheppell.uk
     <link rel="stylesheet" href="<?=$theme_dir?>/css/init1-prefixed.css" type="text/css">
     <link rel="stylesheet" href="<?=$theme_dir?>/font-awesome/css/font-awesome.min.css" type="text/css">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-    <link rel="icon" sizes="196x196" href="<?=$theme_dir?>/img/touch-icon-196x196.png">
-    <!-- For Chrome for Android: -->
-    <link rel="icon" sizes="192x192" href="<?=$theme_dir?>/img/touch-icon-192x192.png">
+    <link rel="icon" sizes="180x180" href="<?=$theme_dir?>/img/icons/apple-touch-icon-180x180.png">
     <!-- For iPhone 6 Plus with @3× display: -->
-    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="<?=$theme_dir?>/img/apple-touch-icon-180x180-precomposed.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?=$theme_dir?>/img/icons/apple-touch-icon-180x180.png">
     <!-- For iPad with @2× display running iOS ≥ 7: -->
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?=$theme_dir?>/img/apple-touch-icon-152x152-precomposed.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="<?=$theme_dir?>/img/icons/apple-touch-icon-152x152.png">
     <!-- For iPad with @2× display running iOS ≤ 6: -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?=$theme_dir?>/img/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="<?=$theme_dir?>/img/icons/apple-touch-icon-144x144.png">
     <!-- For iPhone with @2× display running iOS ≥ 7: -->
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="<?=$theme_dir?>/img/apple-touch-icon-120x120-precomposed.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="<?=$theme_dir?>/img/icons/apple-touch-icon-120x120.png">
     <!-- For iPhone with @2× display running iOS ≤ 6: -->
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?=$theme_dir?>/img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="<?=$theme_dir?>/img/icons/apple-touch-icon-114x114.png">
     <!-- For the iPad mini and the first- and second-generation iPad (@1× display) on iOS ≥ 7: -->
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="<?=$theme_dir?>/img/apple-touch-icon-76x76-precomposed.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="<?=$theme_dir?>/img/icons/apple-touch-icon-76x76.png">
     <!-- For the iPad mini and the first- and second-generation iPad (@1× display) on iOS ≤ 6: -->
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?=$theme_dir?>/img/apple-touch-icon-72x72-precomposed.png">
-    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-    <link rel="apple-touch-icon-precomposed" href="<?=$theme_dir?>/img/apple-touch-icon-precomposed.png"><!-- 57×57px -->
-    <link rel="mask-icon" href="<?=$theme_dir?>/img/apple/chesterIcon.svg" color="#bd0000">
+    <link rel="apple-touch-icon" sizes="57x57" href="<?=$theme_dir?>/img/icons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="<?=$theme_dir?>/img/icons/apple-touch-icon-72x72.png">    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <link rel="apple-touch-icon" href="<?=$theme_dir?>/img/icons/apple-touch-icon.png"><!-- 57×57px -->
+    <!--
+    <link rel="mask-icon" href="<?=$theme_dir?>/img/icons/apple/chesterIcon.svg" color="#bd0000">
     <meta name="application-name" content="<?php bloginfo('name'); ?>"/>
     <meta name="msapplication-square70x70logo" content="small.jpg"/>
     <meta name="msapplication-square150x150logo" content="medium.jpg"/>
     <meta name="msapplication-wide310x150logo" content="wide.jpg"/>
     <meta name="msapplication-square310x310logo" content="large.jpg"/>
     <meta name="msapplication-TileColor" content="#bd0000"/>
+    -->
     <?php wp_head(); ?>
 
     <!--[if lt IE 9]>
