@@ -53,7 +53,7 @@ $current_url = urlencode(home_url(add_query_arg(array(), $wp->request)));
     <div class="container">
       <div class="row">
         <div class="col source-org vcard copyright">
-          <p class="mb-0" style="margin-bottom:0">&copy; <?=current_time("Y", $gmt = 0)?> <span class="org fn"><?php bloginfo('name'); ?></span>. Designed by Chris Heppell.</p>
+          <p class="mb-0" style="margin-bottom:0">&copy; <?=current_time("Y", $gmt = 0)?> <span class="org fn"><?php bloginfo('name'); ?></span>. <a href="https://corporate.myswimmingclub.co.uk" target="_blank" class="text-white">Design &copy; 2019 SCDS</a>.</p>
         </div>
       </div>
     </div>
