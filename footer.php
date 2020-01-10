@@ -33,7 +33,7 @@ $current_url = urlencode(home_url(add_query_arg(array(), $wp->request)));
           </div>
           <div class="col-md-6 col-lg-3">
             <p class="lead"><strong>Contact us</strong></p>
-            <p class="mb-0"><a href="mailto:tbc@rdasc.org.uk" target="new">Email us</a></p>
+            <p class="mb-0"><a href="mailto:admin@rdasc.org.uk" target="new">Email us</a></p>
             <p><a href="https://membership.rdasc.org.uk/reportanissue?url=<?=$current_url?>">Report an issue with this page</a></p>
           </div>
           <div class="col-md-6 col-lg-3">
